@@ -13,5 +13,28 @@ namespace ClassWork
         {
             menu.Add(name, price);
         }
+
+
+        public void RemoveFood(string name,double price)
+        {
+            
+            bool count = false;
+            foreach(string item in menu.Keys)
+            {
+                if (item.Equals(name))
+                {
+                    count = true;
+                    menu.Remove(name);
+                }
+           }
+            if (count == false)
+            {
+
+                Console.WriteLine("We have not food of this type. ");
+                
+            }
+       }
+      
+        
     }
 }

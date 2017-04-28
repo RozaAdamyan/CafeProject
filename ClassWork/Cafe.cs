@@ -3,23 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Device.Location;
 
 namespace ClassWork
 {
     class Cafe:IComparable
     {
-        string name;
-        string phoneNumber;
-        string adress;
-        double rating;
-        public OfficialPage officialPage = new OfficialPage();
-        public Cafe(string name, string phoneNumber, string adress, double rating)
+        public string Name { get; private set; }
+        public string phoneNumber { get; private set; }
+        public GeoCoordinate Adress
         {
-            this.name = name;
-            this.adress = adress;
+            get
+            {
+                return Adress;
+            }
+            set
+            {
+                Adress = value;
+            }
+        }
+        public double Rating { get; private set; }
+        public OfficialPage officialPage = new OfficialPage();
+        public Cafe(string name, string phoneNumber, GeoCoordinate adress, double rating)
+        {
+            this.Name = name;
+            this.Adress = adress;
             this.phoneNumber = phoneNumber;
-            this.rating = rating;
-            this.officialPage.adress = adress;
+            this.Rating = rating;
+            
         }
 
         public int CompareTo(Object obj)

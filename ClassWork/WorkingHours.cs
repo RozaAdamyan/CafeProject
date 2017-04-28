@@ -10,12 +10,11 @@ namespace ClassWork
     {
         string startTime;
         string endTime;
-        WeekDays InputWeekDay;
-        int inputDay;                
-        public WorkingHours()
+        public string InputWeekDay { get; private set; }
+         public WorkingHours()
         {
            
-            if (WeekDays.Saturday == InputWeekDay || WeekDays.Sunday == InputWeekDay)
+          /*  if (WeekDays.Saturday == InputWeekDay || WeekDays.Sunday == InputWeekDay)
             {
                 startTime = "09:00";
                 endTime = "22:00";
@@ -24,7 +23,7 @@ namespace ClassWork
             {
                 startTime = "09:00";
                 endTime = "20:00";
-            }
+            }*/
         }
 
         enum WeekDays

@@ -10,6 +10,7 @@ namespace ClassWork
     {
         public Menu menu = new Menu();
         public string adress { get; set; }
+        public String followers { get; }
 
         WorkingHours hours = new WorkingHours();
 
