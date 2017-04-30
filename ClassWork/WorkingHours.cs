@@ -6,36 +6,43 @@ using System.Threading.Tasks;
 
 namespace ClassWork
 {
-    class WorkingHours
+     class WorkingHours
     {
-        string startTime;
-        string endTime;
-        public string InputWeekDay { get; private set; }
-         public WorkingHours()
+        public  int StartTime { get; private set; }
+        public int EndTime { get; private set; }
+        public string InputWeekDay { get;  set; }
+        public WorkingHours (string inputWeekDay)
         {
-           
-          /*  if (WeekDays.Saturday == InputWeekDay || WeekDays.Sunday == InputWeekDay)
+            InputWeekDay = inputWeekDay;
+        }
+
+        private void SetWorkingHours()
+        {
+            switch (InputWeekDay)
             {
-                startTime = "09:00";
-                endTime = "22:00";
+                case "Mondey":
+                case "Thuesday":
+                case " Wednesday":
+                case "Thursday":
+                case " Friday ":
+                    StartTime = 9;
+                    EndTime = 20;
+                    break;
+                case "Saturday":
+                case "Sunday":
+                    StartTime = 9;
+                    EndTime = 22;
+                    break;
+                default:
+                    Console.WriteLine("Please enter Day Of Week:");
+                    break;
             }
-            else
-            {
-                startTime = "09:00";
-                endTime = "20:00";
-            }*/
         }
-
-        enum WeekDays
+        public void GetWorkingHours()
         {
-            Monday,
-            Thuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday,
-
+            SetWorkingHours();
+            Console.WriteLine("In {0} we work at{1} to {2}", InputWeekDay, StartTime, EndTime);
         }
+
     }
 }

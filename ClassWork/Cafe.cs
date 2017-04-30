@@ -29,9 +29,14 @@ namespace ClassWork
             public string adress;
             public string webPage;
             public string email;
+            
             // 
             // Constructors:
 
+            public Cafe()
+            {
+
+            }
             public Cafe(string name, string rank, string phoneNumber, string adress, string webPage, string email)
             {
                 this.Name = name;
@@ -121,11 +126,10 @@ namespace ClassWork
                     this.email = value;
                 }
             }
-            //
-            // Methods
+        //
+        // Methods
 
-
-            //
+        //
             // Getting information about object(cafe):
             public override string ToString()
             {

@@ -13,7 +13,35 @@ namespace ClassWork
 
         public Dictionary<string, double> menu = new Dictionary<string, double>();
 
-
+        public double GetPriceForFood(string item)
+        {
+            double price=0;
+            foreach (string k in menu.Keys)
+            {
+                if (k.Equals(item))
+                {
+                    price = menu[k];
+                    break;
+                }
+            }
+            return price;
+        }
+        public bool ExistsFood(string item)
+        {
+            bool exists = false;
+           foreach (string k in menu.Keys)
+            {
+                if (k.Equals(item))
+                {
+                    exists = true;
+                }
+               
+            }
+            if (exists)
+                return true;
+            else
+                return false;
+        }
         public void AddingItemToMenu(string item, double value)
         {
             menu.Add(item, value);
