@@ -55,8 +55,9 @@ namespace ClassWork
                     case "add_cafe":
                         Console.Write("Please enter the name : ");
                         string name = Console.ReadLine();
-                        Console.Write("Please enter the adress : ");
-                        string adress = Console.ReadLine();
+                        Console.Write("Please enter the coordinates  : ");
+                        double northernCoordinate = Convert.ToDouble(Console.ReadLine());
+                        double southernCoordinate = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Please enter the phone number : ");
                         string phoneNumber = Console.ReadLine();
                         Console.Write("Please enter the WEB pages URL(optional) : ");
@@ -70,7 +71,7 @@ namespace ClassWork
                             Console.WriteLine("Enter value in range 0-10");
                             goto a;
                         }
-                        Source.AddCafe(new Cafe(name, rank, phoneNumber, adress, webPage, email));
+                        Source.AddCafe(new Cafe(name, rank, phoneNumber,  webPage, email, northernCoordinate, southernCoordinate));
                         break;
                     case "sort":
                         Console.WriteLine("If you want to sort by rating in ascending order enter \"sort_ascending\" \notherwise enter\"sort_descending\" command.");

@@ -17,12 +17,12 @@ namespace ClassWork
             //
             // Initialization of Cafes and their menus:
 
-            Cafe cafe1 = new Cafe("Jazzve", "9", "+374 10 493330", "35 Tumanyan St, Yerevan, Armenia", "http://www.jazzve.am", "info@jazzve.am");
+            Cafe cafe1 = new Cafe("Jazzve", "9", "+374 10 493330", "http://www.jazzve.am", "info@jazzve.am",50.0,40.0);
             cafe1.Menu.AddingItemToMenu("Coffee Amerikano", 400);
             cafe1.Menu.AddingItemToMenu("Coffee Latte", 350);
             cafe1.Menu.AddingItemToMenu("Cake Walnut Chocolate", 1200);
             cafe1.Menu.AddingItemToMenu("Cake Tiramisu", 1300);
-            Cafe cafe2 = new Cafe("Verona", "8", "+374 10 433353", "35 Isahakyan St, Yerevan, Armenia", "http://verona.am", "info@verona.am");
+            Cafe cafe2 = new Cafe("Verona", "8", "+374 10 433353", "http://verona.am", "info@verona.am",60,50);
             cafe2.Menu.AddingItemToMenu("Sandwich with beef", 1100);
             cafe2.Menu.AddingItemToMenu("Sandwich California", 2000);
             cafe2.Menu.AddingItemToMenu("Ice Cream White lady", 1400);
